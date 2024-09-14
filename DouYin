@@ -1,5 +1,5 @@
 #防止抖音跑节点流量-
-AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com))
+#AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com))
 
 OR,PROTOCOL,UDP,REJECT-NO-DROP
 OR,PROTOCOL,QUIC,REJECT-NO-DROP
