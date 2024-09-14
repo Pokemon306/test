@@ -1,0 +1,2 @@
+#防止抖音跑节点流量-
+AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)),DIREC
