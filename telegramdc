@@ -5,5 +5,5 @@
 #!date = 2024-04-29 23:55
 
 [Rule]
-IP-ASN, 62014, 新加坡节点, no-resolve
+IP-ASN, 62014, 新加坡, no-resolve
 
