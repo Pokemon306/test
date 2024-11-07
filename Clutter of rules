@@ -4,3 +4,5 @@ DOMAIN,img.alicdn.com
 #识货开屏广告
 DOMAIN,*.shihuocdn.cn
 
+#小米商城开屏
+DOMAIN,*.api.xiaomi.net
