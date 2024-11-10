@@ -6,3 +6,6 @@ DOMAIN,*.shihuocdn.cn
 
 #小米商城开屏
 DOMAIN,*.api.xiaomi.net
+
+#KFC开屏广告
+DOMAIN,*.360buyimg.com
