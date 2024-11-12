@@ -1,5 +1,5 @@
 # Loon精简配置 Lemonas自用配置
-# 配置链接 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Loon_config
+# 配置链接 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Loon_conf
 
 
 [General]
@@ -163,10 +163,7 @@ https://raw.githubusercontent.com/Mai486/Loon/main/plugin/Tg_url_turrit.plugin, 
 https://kelee.one/Tool/Loon/Plugin/WPS_checkin.plugin, enabled=false
 http://script.hub/file/_start_/https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/refs/heads/main/Talkatone.sgmodule/_end_/Talkatone.plugin?type=surge-module&target=loon-plugin&del=true, policy=Bypass, enabled=false
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=Bypass, enabled=true
-https://gist.githubusercontent.com/YoshichikaTokyo/2fb31b8d7123dfcbd5d3d9ddfa34831f/raw/SakuraChatCookie.plugin, enabled=true
-https://gist.githubusercontent.com/YoshichikaTokyo/e432c0647dde045cbaa66a901ff736c2/raw/SakuraChatTask.plugin, enabled=true
-https://raw.githubusercontent.com/axhani/Script/refs/heads/main/CiSC.plugin, enabled=true
-https://github.com/VirgilClyne/iRingo/raw/main/plugin/Maps.plugin, enabled=true
+https://raw.githubusercontent.com/axhani/Script/refs/heads/main/CiSC.plugin, enabled=false
 https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, tag=快捷搜索, enabled=true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=Bypass, enabled=false
 https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=Bypass, tag=BoxJs, enabled=true
@@ -178,15 +175,8 @@ https://kelee.one/Tool/Loon/Plugin/VVebo_repair.plugin, tag=VVebo时间线修复
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/ColorfulClouds_shared_membership.plugin, enabled=true
 https://raw.githubusercontent.com/Lincorn/RuCu6/refs/heads/main/Plugins/cloudmusic.plugin, tag=网易云音乐会员, enabled=false
 https://whatshub.top/plugin/wxds.plugin, tag=微信读书会员, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/WeiGiegie/666/main/ximalayajisuban.js/_end_/ximalayajisuban.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=喜马拉雅极速版会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Himalaya.png, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/WeiGiegie/666/main/ximalaya.js/_end_/ximalaya.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=喜马拉雅会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Himalaya.png, enabled=false
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_shared_membership.plugin, enabled=false
 https://raw.githubusercontent.com/deezertidal/private/master/plugallery/ydcd.plugin, tag=有道词典会员, enabled=true
-https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_cookie_extraction.plugin, tag=Bilibili Cookie捕获, enabled=false
-http://script.hub/file/_start_/https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js/_end_/BaiduCloud.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=百度云解锁清晰会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/BaiduNetDisk.png, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bdwk.js/_end_/bdwk.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=百度文库会员, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/applebooks.png, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf/_end_/spotify.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=spotify 会员, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPuserCrack.js/_end_/WPSuperVIPuserCrack.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=WPS 会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/KeLee.png, enabled=true
 https://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/AD_Web.plugin, policy=REJECT-DROP, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, tag=哔哩哔哩去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/SodaMusic_remove_ads.plugin, enabled=true
@@ -219,8 +209,6 @@ https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin, tag=Soul去广告, en
 https://kelee.one/Tool/Loon/Plugin/NetEaseGodlike_remove_ads.plugin, tag=网易大神去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/SF-Express_remove_ads.plugin, tag=顺丰速运去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/555DY_remove_ads.plugin, tag=555电影去广告, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Spotify.png, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Spotify_lyrics_translation.plugin, tag=Spotify歌词增强, enabled=false
 https://kelee.one/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin, tag=123云盘去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Keep_remove_ads.plugin, tag=Keep去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/UnionPay_remove_ads_with_ssl_unpinning.plugin, tag=云闪付去广告, enabled=true
@@ -242,11 +230,6 @@ https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, tag=微�
 https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, tag=酷安去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, tag=淘宝去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/UnionPay_remove_ads_with_ssl_unpinning.plugin, tag=云闪付去广告, enabled=true
-https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduNetDisk_crack.plugin, enabled=true
-https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin, enabled=true
-http://script.hub/file/_start_/https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js/_end_/jd_price.plugin.txt?type=qx-rewrite&target=loon-plugin&del=true, tag=京东比价, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Ello.png, enabled=false
-https://raw.githubusercontent.com/mw418/Loon/main/plugin/Bing_rewards.plugin, enabled=false
-https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn_token.plugin, enabled=false
 
 
 
