@@ -1,0 +1,14 @@
+#!name= Luckin Coffee去广告
+#!author= Lemonas［］,@豆豆分享
+#!tag = 去广告
+#!date = 2024-11-13 23:23
+
+[Rewrite]
+#豆豆分享
+^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew reject-dict
+^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList reject-dict
+^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
+^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
+
+[mitm]
+124.71.225.147, ecapi.lkcoffee.com, capi.lkcoffee.com, m.lkcoffee.com
