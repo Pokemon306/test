@@ -1,1 +1,14 @@
-1
+#!name= 瑞幸咖啡去广告
+#!desc= 去除开屏广告 @豆豆
+#!author= @Lemonas
+
+
+[Rewrite]
+#开屏广告等
+^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew reject
+^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList reject
+^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main com script-response-body{var body = $response.body;var json = JSON.parse(body);json.popTitle = "";$done({ body: JSON.stringify(json) });}
+^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page com script-response-body{var body = $response.body;var json = JSON.parse(body);json.status = "SUCCESS";$done({ body: JSON.stringify(json) });}
+
+[MITM]
+hostname = 124.71.225.147, ecapi.lkcoffee.com, capi.lkcoffee.com, m.lkcoffee.com
