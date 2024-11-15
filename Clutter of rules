@@ -9,3 +9,6 @@ DOMAIN,*.api.xiaomi.net
 
 #KFC开屏广告
 DOMAIN,*.360buyimg.com
+
+#微信公众号广告
+DOMAIN-SUFFIX,wxs.qq.com
