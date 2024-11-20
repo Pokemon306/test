@@ -117,7 +117,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://kelee.one/Tool/Loon/Rule/AI.list, policy=自动GPT, tag=AI.list, enabled=true
 https://whatshub.top/rule/PayPal.list, policy=Bypass, tag=PayPal.list, enabled=true
 https://kelee.one/Tool/Loon/Rule/AppStore.list, policy=DIRECT, tag=AppStore.list, enabled=false
-https://whatshub.top/rule/Apple.list, policy=Apple, tag=DIRECT.list, enabled=true
+https://whatshub.top/rule/Apple.list, policy=DIRECT, tag=Apple.list, enabled=true
 https://kelee.one/Tool/Loon/Rule/AppleID.list, policy=DIRECT, tag=Apple ID, enabled=false
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=Bypass, tag=GitHub.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy=Bypass, tag=Twitter.list, enabled=true
