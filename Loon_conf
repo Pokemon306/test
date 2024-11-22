@@ -140,7 +140,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # > Telegram
 
 # > Speedtest
-https://proxyresource.pages.dev/Tool/Loon/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=true
 
 # > China
 
@@ -161,7 +161,7 @@ https://proxyresource.pages.dev/Tool/Loon/Rule/CN_REGION, policy=DIRECT, tag=CN 
 [Plugin]
 # > 开屏广告
 https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=Bypass, tag=插件仓库, enabled=true
-https://loon.126996.xyz/Tool/Loon/Plugin/Block_HTTPDNS.plugin, tag=拦截HTTPDNS, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, tag=拦截HTTPDNS, enabled=true
 https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, tag=广告平台拦截器, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, tag=可莉广告过滤器, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-proxy.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/Switch.png, enabled=true
