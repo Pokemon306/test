@@ -53,5 +53,11 @@ http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.re
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise reject
 
+# > 识货
+# 开屏广告
+^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) reject
+^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png reject-200
+^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png reject-200
+
 [Mitm]
-poplayer.template.alibaba.com, acs.m.taobao.com, amdc.m.taobao.com, guide-acs.m.taobao.com, api.alipan.com, member.alipan.com
+poplayer.template.alibaba.com, acs.m.taobao.com, amdc.m.taobao.com, guide-acs.m.taobao.com, api.alipan.com, member.alipan.com,sh-gateway.shihuo.cn, static.shihuocdn.cn
