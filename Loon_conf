@@ -46,7 +46,7 @@ switch-node-after-failure-times = 3
 disable-stun = true
 
 # 解析器
-resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/latest/downloads/sub-store-parser.loon.min.js
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Host]
 
