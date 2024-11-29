@@ -1,8 +1,7 @@
 #!name=去除广告｜饿了么
 #!desc=过滤饿了么开屏广告\n作者：fmz200\n更新：2024-10-19 19:56:07
 #!author=fmz200, JM for respect of Walalala
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1019.png
-#!keyword=去除广告
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/eleme.png
 #!update=2024-10-19 19:56:07
 
 [Rule]
