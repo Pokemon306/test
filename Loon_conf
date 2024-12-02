@@ -6,7 +6,7 @@
 real-ip = *.apple.com,*.icloud.com
 ipasn-url = https://github.com/LD2J0618/loon/blob/plugin%26rule/GeoIP_all.mmdb
 ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
-ip-mode = ipv4-preferred
+ip-mode = dual
 disconnect-on-policy-change = false
 dns-reject-mode = LoopbackIP
 domain-reject-mode = DNS
@@ -21,7 +21,7 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 # Real-Ip
 
 # DNS 服务器
-dns-server = system
+dns-server = system,
 
 # Wi-Fi 访问
 allow-wifi-access = false
@@ -46,7 +46,7 @@ switch-node-after-failure-times = 3
 disable-stun = true
 
 # 解析器
-resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+resource-parser = hhttps://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Host]
 
@@ -111,7 +111,7 @@ DOMAIN,frontier-aweme.snssdk.com,DIRECT
 
 # 订阅规则
 [Remote Rule]
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Clutter%20of%20rules, policy=REJECT-DROP, tag=Clutter of rules, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/AdBlock.list, policy=REJECT, tag=AdBlock.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DouYin/DouYin.list, policy=DIRECT, tag=DouYin.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 https://kelee.one/Tool/Loon/Rule/AI.list, policy=自动GPT, tag=AI.list, enabled=true
@@ -168,6 +168,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-pr
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Fries%20General%20Enhanced, enabled=true
 https://raw.githubusercontent.com/tearpeng/ios/refs/heads/main/dns%E6%98%A0%E5%B0%84, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/plugin/DNS.plugin, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/CiSC.plugin, tag=签到脚本合集, enabled=true
 http://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/WeChat.plugin, policy=DIRECT, enabled=false
 https://raw.githubusercontent.com/Mai486/Loon/main/plugin/Tg_url_turrit.plugin, enabled=false
 https://kelee.one/Tool/Loon/Plugin/WPS_checkin.plugin, enabled=false
