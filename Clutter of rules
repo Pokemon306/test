@@ -6,9 +6,8 @@ DOMAIN,*.shihuocdn.cn
 
 #小米商城开屏
 DOMAIN,*.api.xiaomi.net
-#DOMAIN,i8.mifile.cn
-#DOMAIN,sh1.shihuocdn.cn
-#DOMAIN,cdn.cnbj0.fds.api.mi-img.com
+DOMAIN,i8.mifile.cn
+DOMAIN,cdn.cnbj0.fds.api.mi-img.com
 
 #KFC开屏广告
 DOMAIN,*.360buyimg.com
