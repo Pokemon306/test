@@ -1,0 +1,78 @@
+#!name=广告拦截小合集
+#!desc=针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！可以配置到规则或者插件，大部分规则来自奶思大佬合集
+#!author=Lemonas
+#!tag = 去广告
+#!date=2024-12-2
+#!proxy-select=REJECT
+
+# > 百度地图
+DOMAIN, afd.baidu.com
+DOMAIN, afdconf.baidu.com
+DOMAIN, httpdns.baidubce.com
+DOMAIN, lc.map.baidu.com
+
+# > 车来了（包括小程序）
+DOMAIN-SUFFIX,atrace.chelaile.net.cn
+DOMAIN, logs.chelaile.net.cn
+DOMAIN, ad.chelaile.net.cn
+
+# > 广州地铁乘车码
+# 多个广告 感谢CtrlMusic🐓分享
+DOMAIN, apis.alenable.com
+
+# > 收钱吧 买单小程序去广告
+DOMAIN, ads-shopping.shouqianba.com
+
+# > 腾讯视频
+DOMAIN, adsmind.gdtimg.com
+DOMAIN, btrace.qq.com
+DOMAIN, btrace.video.qq.com
+DOMAIN, info4.video.qq.com
+DOMAIN, info6.video.qq.com
+DOMAIN, ios.video.mpush.qq.com
+DOMAIN, mtrace.qq.com
+DOMAIN, p.l.qq.com
+DOMAIN, pgdt.gtimg.cn
+DOMAIN, rpt.gdt.qq.com
+DOMAIN-SUFFIX,trace.qq.com
+DOMAIN-SUFFIX,tetrack.qq.com
+DOMAIN-SUFFIX,tpns.tencent.com
+DOMAIN-SUFFIX,api.poll.video.qq.com
+DOMAIN-SUFFIX,static-res.qq.com
+DOMAIN-SUFFIX,stat.tpns.tencent.com
+DOMAIN, h.trace.qq.com
+DOMAIN-KEYWORD,omgmta.qq.com
+DOMAIN-KEYWORD,omgmta1.qq.com
+
+# > 万能钥匙专业版
+# 感谢#All in 梭哈分享
+DOMAIN-SUFFIX,mi.gdt.qq.com
+# 去除导航栏免费短剧
+DOMAIN, taichi.51y5.net
+
+# > 小米
+DOMAIN, data.mistat.xiaomi.com
+DOMAIN, tracking.intl.miui.com
+
+# > 云闪付
+DOMAIN, ads.95516.com
+DOMAIN, cm-10-138.getui.com
+DOMAIN, sdk.open.talk.getui.net
+DOMAIN, sdk-conf.getui.com
+DOMAIN, switch.cup.com.cn
+DOMAIN, tysdk.95516.com
+
+# > 中国移动
+IP-CIDR, 120.240.95.37/32, no-resolve
+
+# > 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com
+
+# > 中国电信
+DOMAIN, ad.21cn.com
+DOMAIN, ad.k.21cn.com
+DOMAIN, admarket.21cn.com
+DOMAIN, adshows.21cn.com
+IP-CIDR, 122.229.8.47/32, no-resolve
+IP-CIDR, 122.229.29.89/32, no-resolve
+
