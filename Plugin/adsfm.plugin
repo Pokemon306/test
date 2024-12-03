@@ -3,7 +3,7 @@
 #!author= Lemonas[https://github.com/Lincorn]
 #!icon= https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/icon/mike.jpg
 #!loon_version = 3.2.4(787)
-#!date = 2024-12-2 09:43
+#!date = 2024-12-3 20:39
 
 [Rewrite]
 # > 识货 //来自奶思大佬合集
@@ -61,16 +61,19 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 # > 中国广电 //来自奶思大佬合集
 ^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage reject-200
 
-# > 微信
+# > 微信 //来自奶思大佬合集
 # 公众号文章下方广告
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
 # 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
 
 [Script]
-# > 小米商城//来自奶思大佬合集
+# > 小米商城 //来自奶思大佬合集
 http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=小米商城
 
+# > 百度贴吧 //来自奶思大佬合集
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=60, tag=百度贴吧广告
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告
 
 [MITM]
 hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  
