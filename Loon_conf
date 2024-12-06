@@ -4,14 +4,13 @@
 
 [General]
 real-ip = *.apple.com,*.icloud.com
-ipasn-url = https://github.com/LD2J0618/loon/blob/plugin%26rule/GeoIP_all.mmdb
-ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdbGeoLite2-ASN.mmdb
 ip-mode = dual
 disconnect-on-policy-change = false
 dns-reject-mode = LoopbackIP
 domain-reject-mode = DNS
 udp-fallback-mode = REJECT
-geoip-url = https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 sni-sniffing = true
 
 # 跳过某个域名或者IP段
