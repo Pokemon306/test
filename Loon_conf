@@ -116,8 +116,8 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://kelee.one/Tool/Loon/Rule/AI.list, policy=自动GPT, tag=AI.list, enabled=true
 https://whatshub.top/rule/PayPal.list, policy=Bypass, tag=PayPal.list, enabled=true
 https://kelee.one/Tool/Loon/Rule/AppStore.list, policy=DIRECT, tag=AppStore.list, enabled=false
-https://whatshub.top/rule/Apple.list, policy=DIRECT, tag=Apple.list, enabled=true
-https://kelee.one/Tool/Loon/Rule/AppleID.list, policy=DIRECT, tag=Apple ID, enabled=false
+https://whatshub.top/rule/Apple.list, policy=DIRECT, tag=Apple.list, enabled=false
+https://kelee.one/Tool/Loon/Rule/AppleID.list, policy=DIRECT, tag=Apple ID, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=Bypass, tag=GitHub.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy=Bypass, tag=Twitter.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Facebook/Facebook.list, policy=Bypass, tag=Facebook.list, enabled=true
@@ -129,8 +129,8 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Emby/Emby.list, policy=Bypass, tag=Emby, enabled=true
 
 # > YouTube
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=Bypass, tag=YouTube, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=Bypass, tag=Google.list, enabled=true
+https://rule.kelee.one/Loon/YouTube.list, policy=Bypass, tag=YouTube, enabled=true
+https://rule.kelee.one/Loon/Google.list, policy=Bypass, tag=Google.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OneDrive/OneDrive.list, policy=Bypass, tag=OneDrive.list, enabled=true
 
 # > Netflix
