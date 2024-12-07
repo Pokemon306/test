@@ -1,0 +1,24 @@
+#!name= AdGuard
+#!desc= AdGuard 是 Safari 的超高效广告拦截器。
+#!author= chxm1023
+#!homepage= https://t.me/tossichannel/2072
+#!icon= https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/e8/ed/8ee8ed34-f71e-7ec9-fd9b-c6f896bbc1f4/AppIcon-0-0-1x_U007epad-0-11-0-sRGB-85-220.png/230x0w.webp
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+#!openUrl = https://apps.apple.com/app/id1047223162
+#!data = 2024-11-08
+
+
+[Argument]
+appName = input,"AdGuard",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,flase,tag=是否启用执行的的脚本(默认不开启)
+
+
+[Script]
+http-response ^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/AdGuard.js, requires-body=true, timeout=60, tag=AdGuard,enable = {ScriptEnable}
+
+[MITM]
+hostname = mobile-api.adguard.org
