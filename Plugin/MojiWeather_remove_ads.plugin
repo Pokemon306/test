@@ -1,0 +1,23 @@
+#!name = 墨迹天气
+#!desc = 纯净墨迹天气
+#!openUrl = https://apps.apple.com/app/id434209233
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], RuCu6[https://github.com/RuCu6]
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MojiWeather.png
+#!date = 2024-12-06 19:40
+
+[Rule]
+DOMAIN, ad.api.moji.com, REJECT
+DOMAIN, adlaunch.moji.com, REJECT
+DOMAIN, fcard.api.moji.com, REJECT
+DOMAIN, mcmn.api.moji.com, REJECT
+DOMAIN, mcs.api.moji.com, REJECT
+DOMAIN, mmqn.api.moji.com, REJECT
+DOMAIN, vdo.api.moji.com, REJECT
+DOMAIN, ztoken.uyunad.com, REJECT
+
+[Rewrite]
+^https:\/\/mme\.api\.moji\.com\/json\/entrance\/list$ response-body-json-jq 'del(.entrance_region_res_list[] | select(.region_name == "皇冠区域" or .region_name == "banner区")) | .entrance_region_res_list[].entrance_res_list |= if . then map(select(.entrance_name | . != "墨迹钱包" and . != "墨圈")) else . end'
+^https:\/\/sns\.api\.moji\.com\/(?:forum|user\/dynamic_v[89]\/json)\/ reject-dict
+
+[MITM]
+hostname = mme.api.moji.com, sns.api.moji.com
