@@ -1,7 +1,8 @@
-
-
-
-
+#!name=CMcomic分流
+#!desc=配合破解插件使用，解决部分打不开的问题
+#!author=心安
+#!date=2024-12-15
+#!proxy-select=Proxy
 
 DOMAIN-SUFFIX,jmapiproxy3.cc
 DOMAIN-SUFFIX,jmapiproxy2.cc
