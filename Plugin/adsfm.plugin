@@ -104,7 +104,7 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 ^https:\/\/api-cfg\.wtzw\.com\/v\d\/offline-adv\/index reject-dict
 ^https:\/\/api-cfg\.wtzw\.com\/v\d\/operation\/index\?ad_personal_switch reject-dict
 ^https:\/\/xiaoshuo\.wtzw\.com\/api\/v\d\/withdraw\/init reject-dict
-
+^https:\/\/xiaoshuo\.wtzw\.com\/api\/v\d\/user\/my-center\? response-body-json-del data.func_area[1] data.func_area[2]
 
 [MITM]
 hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, 
