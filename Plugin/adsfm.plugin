@@ -5,6 +5,13 @@
 #!loon_version = 3.2.4(787)
 #!date = 2024-12-3 20:39
 
+[Rule]
+# > 七猫小说
+DOMAIN,cdn-ad.wtzw.com,REJECT 
+DOMAIN,cdn-new-ad.wtzw.com,REJECT 
+DOMAIN-SUFFIX,gdt.qq.com,REJECT 
+
+
 [Rewrite]
 # > 识货 //来自奶思大佬合集
 # 开屏广告
@@ -75,5 +82,29 @@ http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path=https://ra
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=60, tag=百度贴吧广告
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告
 
+# > 七猫小说 //来自奶思大佬合集和可莉大佬
+# 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
+^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
+^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
+^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad reject
+^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk reject
+^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) reject
+^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo reject
+^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad reject
+^https:\/\/api-cfg\.wtzw\.com\/v\d\/splash\/ reject-dict
+^https:\/\/api-bc\.wtzw\.com\/api\/v4\/search\/dispose reject-dict
+^https:\/\/api-bc\.wtzw\.com\/api\/v\d\/book-store\/config reject-dict
+^https:\/\/api-bc\.wtzw\.com\/api\/v\d\/book-store\/push-book reject-dict
+^https:\/\/api-bc\.wtzw\.com\/api\/v\d\/operation reject-dict
+^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
+^https:\/\/api-gw\.wtzw\.com\/welf\/app\/v\d\/task\/red-packet reject-dict
+^https:\/\/cdn\.wtzw\.com\/bookimg\/free\/api\/v\d\/reader\/reader-copy-paragraph-all\.json reject-dict
+^https:\/\/api-cfg\.wtzw\.com\/v\d\/reward\/ reject
+^https:\/\/api-cfg\.wtzw\.com\/v\d\/adv\/ reject
+^https:\/\/api-cfg\.wtzw\.com\/v\d\/offline-adv\/index reject-dict
+^https:\/\/api-cfg\.wtzw\.com\/v\d\/operation\/index\?ad_personal_switch reject-dict
+^https:\/\/xiaoshuo\.wtzw\.com\/api\/v\d\/withdraw\/init reject-dict
+
+
 [MITM]
-hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  
+hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, 
