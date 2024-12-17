@@ -3,7 +3,7 @@
 #!author= Lemonas[https://github.com/Lincorn]
 #!icon= https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/icon/mike.jpg
 #!loon_version = 3.2.4(787)
-#!date = 2024-12-17 18:58
+#!date = 2024-12-17 21:06
 
 [Rule]
 
@@ -79,7 +79,7 @@ http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path=https://ra
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=60, tag=百度贴吧广告
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告
 
-# > 七猫小说 //来自奶思大佬合集和可莉大佬
+# > 七猫小说 //来自奶思大佬合集
 # 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
 ^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
 ^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
@@ -88,6 +88,10 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 ^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) reject
 ^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo reject
 ^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad reject
+
+# > 大众点评 //来自奶思大佬合集
+# 开屏广告
+http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true, timeout=60, tag=大众点评
 
 [MITM]
 hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, 
