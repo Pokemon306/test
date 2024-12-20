@@ -3,7 +3,7 @@
 #!author= Lemonas[https://github.com/Lincorn]
 #!icon= https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/icon/mike.jpg
 #!loon_version = 3.2.4(787)
-#!date = 2024-12-17 21:06
+#!date = 2024-12-21 00:08
 
 [Rule]
 
@@ -70,6 +70,13 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
 # 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
+
+# > 腾讯视频
+^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
+^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+^https?:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+^https?:\/\/vv\.video\.qq\.com\/getvinfo response-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
+
 
 [Script]
 # > 小米商城 //来自奶思大佬合集
