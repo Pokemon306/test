@@ -1,0 +1,14 @@
+#!name=京东比价
+#!desc= 京东比价，最新版京东（13.8.2）可用
+#!author= 灰灰[https://github.com/wf021325], 删除联系[https://t.me/Lemonass_bot]
+#!icon=https://imgs.8235467.xyz/file/1734846438106_jindong.jpg
+#!openUrl = https://apps.apple.com/app/id414245413
+#!loon_version = 3.2.4(787)
+#!tag = 脚本,京东比价
+#!date = 2024-09-16 
+
+[Script]
+http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, timeout=60, tag=jd_price
+
+[MITM]
+hostname = api.m.jd.com
