@@ -1,6 +1,6 @@
 #!name=京东比价
-#!desc= 京东比价，最新版京东（13.8.2）可用
-#!author= 灰灰[https://github.com/wf021325], 删除联系[https://t.me/Lemonass_bot]
+#!desc= 在京东应用内嵌入比价信息，点击商品标题即可查看，仅支持京东标准模式，最新版京东（13.8.2）可用
+#!author= 苍井灰灰[https://github.com/wf021325], githubdulong[https://github.com/githubdulong], 删除联系[https://t.me/Lemonass_bot]
 #!icon=https://imgs.8235467.xyz/file/1734846438106_jindong.jpg
 #!openUrl = https://apps.apple.com/app/id414245413
 #!loon_version = 3.2.4(787)
