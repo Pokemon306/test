@@ -1,6 +1,6 @@
 #!name = 签到脚本合集
 #!desc = 收集并整理各大佬的定时签到脚本。脚本数量22:奶茶多合一、蜜雪冰城、达美乐、阿里云社区、雨晨ios、高德地图、高德抢券、顺丰速运、B站每日等级、NodeSeek、网易云音乐人、杜蕾斯、杰士邦、逢三得利、WPS领会员，匹歪价格监控_自动下单、吾爱破解、百度贴吧、小米运动刷步、阿里云盘、胖乖生活、途虎养车、奈雪
-#!date = 2024-11-22 美化排序
+#!date = 2025-3-2
 #!author = 删除联系[https://t.me/Lemonass_bot], 原作者[https://t.me/axhani_bot]
 #!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/miaomiao.png
 #!loon_version = 3.2.4(787)
@@ -164,8 +164,8 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 cron {arg61} script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, timeout=300, enable={arg62}, tag=胖乖生活
 http-request ^https:\/\/userapi\.qiekj\.com\/wechat\/unionId\/login script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, requires-body=true, timeout=60, enable = {arg63}, tag=胖乖生活cookie获取
 
-cron {arg64} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js, timeout=300, enable={arg65},tag = 途虎养车
-http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo tag=途虎养车获取cookie, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js,enable={arg66},requires-body=0
+cron {arg64} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js, timeout=300, enable={arg65},tag = 途虎养车
+http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo tag=途虎养车获取cookie, script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js,enable={arg66},requires-body=0
 
 cron {arg67} script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=300, enable={arg68},tag = 奈雪点单
 http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60,  enable={arg69},tag=奈雪点单获取token
