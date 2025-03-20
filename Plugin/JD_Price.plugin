@@ -1,14 +1,15 @@
 #!name=京东比价
-#!desc= 在京东应用内嵌入比价信息，点击商品标题即可查看，仅支持京东标准模式，最新版京东（13.8.2）可用
-#!author= 苍井灰灰[https://github.com/wf021325], githubdulong[https://github.com/githubdulong], 删除联系[https://t.me/Lemonass_bot]
+#!desc= 京东App历史价格（商品详情页面触发）
+#!author= 小白脸, 删除联系[https://t.me/Lemonass_bot]
 #!icon=https://imgs.8235467.xyz/file/1734846438106_jindong.jpg
 #!openUrl = https://apps.apple.com/app/id414245413
-#!loon_version = 3.2.4(787)
+#!loon_version = 3.2.7(835)
 #!tag = 脚本,京东比价
-#!date = 2024-09-16 
+#!date = 2025-03-20
+
 
 [Script]
-http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, timeout=60, tag=京东比价
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=30, tag=京东比价
 
 [MITM]
-hostname = api.m.jd.com
+hostname = in.m.jd.com
