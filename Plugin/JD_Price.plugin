@@ -1,11 +1,11 @@
 #!name=京东比价
-#!desc= 京东App历史价格（商品详情页面触发）
+#!desc= 京东App历史价格（商品详情页面触发）脚本测试京东最新版 App V15.0.80（其他版本自行测试）
 #!author= 小白脸, 删除联系[https://t.me/Lemonass_bot]
 #!icon=https://imgs.8235467.xyz/file/1734846438106_jindong.jpg
 #!openUrl = https://apps.apple.com/app/id414245413
 #!loon_version = 3.2.7(835)
 #!tag = 脚本,京东比价
-#!date = 2025-03-20
+#!date = 2025-03-20 22.03
 
 
 [Script]
