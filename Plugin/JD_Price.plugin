@@ -5,11 +5,11 @@
 #!openUrl = https://apps.apple.com/app/id414245413
 #!loon_version = 3.2.7(835)
 #!tag = 脚本,京东比价
-#!date = 2025-03-20 23.19
+#!date = 2025-03-21 08.49
 
 
 [Script]
-http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=60, tag=京东比价
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=30, tag=JD Price History, img-url=https://raw.githubusercontent.com/GeQ1an/Rules/master/Images/Icons/Apps/JD.png
 
 [MITM]
 hostname = in.m.jd.com
