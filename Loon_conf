@@ -3,7 +3,10 @@
 
 
 [General]
-ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdbGeoLite2-ASN.mmdb
+ipv6-vif = auto
+mitm-on-wifi-access = false
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+real-ip = *.apple.com,*.icloud.com,*.ugreen.cloud,*.ugreengroup.com,
 ip-mode = dual
 disconnect-on-policy-change = false
 dns-reject-mode = LoopbackIP
@@ -13,13 +16,13 @@ geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 sni-sniffing = true
 
 # 跳过某个域名或者IP段
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com,
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 
 # Real-Ip
-real-ip = *.apple.com,*.icloud.com
+
 # DNS 服务器
-dns-server = system,
+dns-server = system,119.29.29.29,223.5.5.5
 
 # Wi-Fi 访问
 allow-wifi-access = false
@@ -44,7 +47,7 @@ switch-node-after-failure-times = 3
 disable-stun = true
 
 # 解析器
-resource-parser = hhttps://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Host]
 
@@ -59,9 +62,9 @@ resource-parser = hhttps://raw.githubusercontent.com/sub-store-org/Sub-Store/rel
 订阅节点 = NameRegex, FilterKey = "^(?!.*(流量|测试|使用|更新|游戏)).*$"
 手动筛选 = NameRegex, FilterKey = "(.*)"
 香港节点 = NameRegex, FilterKey = "(?i)(?:🇭🇰|港|香港|\b(?:HK|Hong\x20?Kong)\b)(?!.*免流)"
-新加坡节点 = NameRegex, FilterKey = "(?i)(?:🇸🇬|坡|新加坡|狮城|\b(?:SG|Singapore)\b)"
+新加坡节点 = NameRegex, FilterKey = "(?i)(🇸🇬|新加坡|狮城|SG|Singapore)"
 台湾节点 = NameRegex, FilterKey = "(?i)(?:🇹🇼|🇨🇳|台|湾|台湾|台灣|\b(?:TW|Taiwan)\b)"
-韩国节点 = NameRegex, FilterKey = "(?i)(?:🇰🇷|韩|韓|韩国|韓國|首尔|南朝鲜|\b(?:KR|KOR|Korea|South\x20?Korea)\b)"
+韩国节点 = NameRegex, FilterKey = "(?i)(🇰🇷|KR|Korea|KOR|首尔|韩|韓)"
 美国节点 = NameRegex, FilterKey = "(?i)(?:🇺🇸|美|美国|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(?:US|United\x20?States|American)\b)"
 日本节点 = NameRegex, FilterKey = "(?i)(?:🇯🇵|日|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|\b(?:JP|Japan)\b)"
 
@@ -71,16 +74,17 @@ resource-parser = hhttps://raw.githubusercontent.com/sub-store-org/Sub-Store/rel
 
 # 策略组
 [Proxy Group]
-Bypass = select,香港延迟优选,新加坡延迟优选,日本延迟优选,台湾节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/lightning.png
+Bypass = select,落地HK,🇭🇰HK-hy2,🇺🇸 US | Black Friday,香港延迟优选,新加坡延迟优选,日本延迟优选,🇯🇵 𝙅𝙖𝙥𝙖𝙣 | 𝘽𝙂𝙋,🇭🇰 HK-BGP,🇭🇰𝙃𝙆 | 𝘽𝙂𝙋ˣ³,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/lightning.png
 香港延迟优选 = url-test,香港节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong.png
 日本延迟优选 = url-test,日本节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/zl-icon-jp-flag.png
 台湾延迟优选 = url-test,台湾节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan(3).png
 韩国延迟优选 = url-test,韩国节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Korea.png
 新加坡延迟优选 = url-test,新加坡节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore(1).png
-自动GPT = url-test,美国节点,美国坤,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png
-Telegram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,美国坤,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(1).png
-Instagram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,落地HK vps,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png
-TikTok = select,日本延迟优选,香港延迟优选,新加坡延迟优选,自动GPT,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok((2).png
+自动GPT = url-test,美国节点,🇺🇸 US | Black Friday,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png
+Telegram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,🇺🇸 US | Black Friday,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(1).png
+Instagram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+TikTok = select,日本延迟优选,香港延迟优选,新加坡延迟优选,自动GPT,🇺🇸 US | Black Friday,🇭🇰HK-hy2,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok((2).png
+Spotify = select,🇺🇸 US | Black Friday,自动GPT,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
 
 
 
@@ -90,54 +94,65 @@ TikTok = select,日本延迟优选,香港延迟优选,新加坡延迟优选,自�
 
 
 [Rule]
+#IP-CIDR,149.88.82.119/32,REJECT
+
+
 # > GeoIP China
 FINAL,Bypass
+#AND,((NOT,((GEOIP,cn))),(PROTOCOL,QUIC)),REJECT
+#避免一些P2P请求，防止B站之类的白嫖上传
+AND,((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)),REJECT
+AND,((PROTOCOL,STUN)),REJECT
 #防止抖音跑节点流量
-AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)),DIRECT
+#AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)),DIRECT
 #防止微信转圈圈
 #AND,((OR,((PROTOCOL,UDP), (PROTOCOL,QUIC))), (DEST-PORT,443)),REJECT-NO-DROP
 #防止TG转圈圈
-IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
+#IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 #抖音实时消息修复
-AND,((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.), (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, amemv.com)))))),DIRECT
-DOMAIN,frontier-aweme.snssdk.com,DIRECT
+#AND,((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.), (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, amemv.com)))))),DIRECT
+#DOMAIN,frontier-aweme.snssdk.com,DIRECT
 
 
 
 # 订阅规则
 [Remote Rule]
+https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list, policy=REJECT, tag=rejectAd.list, enabled=false
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/AdBlock.list, policy=REJECT, tag=AdBlock.list, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DouYin/DouYin.list, policy=DIRECT, tag=DouYin.list, enabled=true
-https://kelee.one/Tool/Loon/Rule/AI.list, policy=自动GPT, tag=AI.list, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/hth.list, policy=DIRECT, tag=hth.list, enabled=false
+https://rule.kelee.one/Loon/Discord.list, policy=Bypass, tag=Discord.list, enabled=true
+https://rule.kelee.one/Loon/Notion.list, policy=Bypass, tag=Notion.list, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DouYin/DouYin.list, policy=DIRECT, tag=DouYin.list, enabled=false
+https://kelee.one/Tool/Loon/Rule/AI.list, policy=🇺🇸 US | Black Friday, tag=AI.list, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Threads/Threads.list, policy=Instagram, tag=Threads.list, enabled=true
 https://whatshub.top/rule/PayPal.list, policy=Bypass, tag=PayPal.list, enabled=true
 https://kelee.one/Tool/Loon/Rule/AppStore.list, policy=DIRECT, tag=AppStore.list, enabled=false
 https://whatshub.top/rule/Apple.list, policy=DIRECT, tag=Apple.list, enabled=false
 https://kelee.one/Tool/Loon/Rule/AppleID.list, policy=DIRECT, tag=Apple ID, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=Bypass, tag=GitHub.list, enabled=true
+https://rule.kelee.one/Loon/YouTube.list, policy=Bypass, tag=YouTube.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy=Bypass, tag=Twitter.list, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Facebook/Facebook.list, policy=Bypass, tag=Facebook.list, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=自动GPT, tag=Spotify.list, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Facebook/Facebook.list, policy=Instagram, tag=Facebook.list, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=Spotify, tag=Spotify.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Instagram/Instagram.list, policy=Instagram, tag=Instagram, enabled=true
 
 # > Emby
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Emby/Emby.list, policy=Bypass, tag=Emby, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=🇺🇸 US | Black Friday, tag=Netflix, enabled=true
 
 # > YouTube
-https://rule.kelee.one/Loon/YouTube.list, policy=Bypass, tag=YouTube, enabled=true
 https://rule.kelee.one/Loon/Google.list, policy=Bypass, tag=Google.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OneDrive/OneDrive.list, policy=Bypass, tag=OneDrive.list, enabled=true
 
 # > Netflix
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Bypass, tag=Netflix, enabled=true
-
-# > 本地局域网
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list, policy=DIRECT, tag=Lan.list, enabled=true
 
 # > Telegram
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
+
+# > Speedtest
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/CN_REGION, policy=DIRECT, tag=CN_REGION, enabled=true
 
 # > China
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=true
 
 # > Proxy
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
@@ -155,26 +170,35 @@ https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/CN_REGION, p
 [Plugin]
 # > 开屏广告
 https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=Bypass, tag=插件仓库, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, tag=拦截HTTPDNS, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/HTTPDNS.png, enabled=true
 https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, tag=广告平台拦截器, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, tag=拦截HTTPDNS, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/HTTPDNS.png, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, tag=可莉广告过滤器, enabled=true
 https://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/AD_Web.plugin, policy=REJECT-DROP, enabled=true
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/adsfm.plugin, enabled=true
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/pingduoduo.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/KOOK_remove_ads.plugin, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-proxy.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/Switch.png, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/adsfm.plugin, tag=自用去广告合集, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Fries%20General%20Enhanced, enabled=true
-https://raw.githubusercontent.com/tearpeng/ios/refs/heads/main/dns%E6%98%A0%E5%B0%84, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-proxy.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/Switch.png, enabled=true
 https://github.com/VirgilClyne/GetSomeFries/raw/main/plugin/DNS.plugin, enabled=true
+https://raw.githubusercontent.com/tearpeng/ios/refs/heads/main/dns%E6%98%A0%E5%B0%84, enabled=true
+https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=🇺🇸 US | Black Friday, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin, tag=腾讯视频去广告, enabled=false
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/KuaiShou_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/HKDouYin_remove_ads.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/ZhiLianZhaoPin_remove_ads.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/KebidaDushu_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/KOOK_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/CiSC.plugin, tag=签到脚本合集, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/Jingdong.plugin, enabled=true
 http://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/WeChat.plugin, policy=DIRECT, enabled=false
 https://raw.githubusercontent.com/Mai486/Loon/main/plugin/Tg_url_turrit.plugin, enabled=false
 https://kelee.one/Tool/Loon/Plugin/WPS_checkin.plugin, enabled=false
-https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=Bypass, enabled=true
-https://gist.githubusercontent.com/YoshichikaTokyo/2fb31b8d7123dfcbd5d3d9ddfa34831f/raw/SakuraChatCookie.plugin, enabled=true
-https://gist.githubusercontent.com/YoshichikaTokyo/e432c0647dde045cbaa66a901ff736c2/raw/SakuraChatTask.plugin, enabled=true
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/CiSC.plugin, tag=签到脚本合集, enabled=true
 https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin, enabled=false
+https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/JD_Price.plugin, enabled=false
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, tag=快捷搜索, enabled=true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=Bypass, enabled=true
@@ -182,7 +206,11 @@ https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=Bypass, tag=BoxJs, enabl
 https://kelee.one/Tool/Loon/Plugin/TestFlightRegionUnlock.plugin, policy=DIRECT, tag=TestFlight地区解锁, enabled=false
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduWenku_crack.plugin, enabled=true
 https://raw.githubusercontent.com/deezertidal/private/master/plugallery/bili.plugin, tag=Bilibili 解锁1080P, enabled=true
+https://raw.8235467.xyz/Plugin/xmlyjisu.plugin?token=l123123, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Himalaya.png, enabled=true
+https://raw.8235467.xyz/Plugin/keep.plugin?token=l123123, enabled=true
+http://script.hub/file/_start_/https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js/_end_/panda.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=百度网盘会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/BaiduNetDisk.png, enabled=false
 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin, enabled=false
+http://script.hub/file/_start_/https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy-surge.sgmodule/_end_/wyy-surge.plugin?type=qx-rewrite&target=loon-plugin&del=true, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/wyy(1).png, enabled=false
 https://kelee.one/Tool/Loon/Plugin/QQ_Redirect.plugin, tag=QQ链接解锁, enabled=true
 https://kelee.one/Tool/Loon/Plugin/VVebo_repair.plugin, tag=VVebo时间线修复, enabled=true
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/ColorfulClouds_shared_membership.plugin, enabled=true
@@ -191,7 +219,6 @@ https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_shared_membersh
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_cookie_extraction.plugin, tag=Bilibili Cookie捕获, enabled=false
 https://raw.githubusercontent.com/deezertidal/private/master/plugallery/ydcd.plugin, tag=有道词典会员, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/elema.plugin, enabled=true
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/qimao.plugin, enabled=false
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/meituan.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/LuckinCoffee_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/QtingFM_remove_ads.plugin, enabled=true
@@ -234,7 +261,7 @@ https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin, tag=Soul去广告, en
 https://kelee.one/Tool/Loon/Plugin/NetEaseGodlike_remove_ads.plugin, tag=网易大神去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/SF-Express_remove_ads.plugin, tag=顺丰速运去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/555DY_remove_ads.plugin, tag=555电影去广告, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Spotify.png, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Spotify.png, enabled=false
 https://kelee.one/Tool/Loon/Plugin/Spotify_lyrics_translation.plugin, tag=Spotify歌词增强, enabled=false
 https://kelee.one/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin, tag=123云盘去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Keep_remove_ads.plugin, tag=Keep去广告, enabled=true
@@ -243,22 +270,20 @@ https://kelee.one/Tool/Loon/Plugin/QiDian_remove_ads.plugin, tag=起点读书去
 https://kelee.one/Tool/Loon/Plugin/BaiduMap_remove_ads.plugin, tag=百度地图去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, tag=全民K歌去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/QuarkBrowser_remove_ads.plugin, tag=夸克去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin, tag=腾讯视频去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, tag=微信公众号去广告, enabled=false
+https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, tag=微信公众号去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin, tag=彩云天气去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, tag=Spotify去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/YoudaoDict_remove_ads.plugin, tag=网易有道词典去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, tag=番茄小说去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, tag=滴滴出行去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, tag=菜鸟去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, tag=京东去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin, tag=拼多多去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, tag=微信小程序去广告, enabled=true
+https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, tag=微信小程序去广告, enabled=false
 https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, tag=酷安去广告, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, tag=淘宝去广告, enabled=true
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduNetDisk_crack.plugin, enabled=true
-https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin, enabled=true
 https://raw.githubusercontent.com/mw418/Loon/main/plugin/Bing_rewards.plugin, enabled=false
+
 
 
 
@@ -268,14 +293,19 @@ https://raw.githubusercontent.com/mw418/Loon/main/plugin/Bing_rewards.plugin, en
 
 # 远程脚本 
 [Remote Script]
-https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tools.scripts, tag=Loon工具合集, enabled=false
+http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=60, enabled=false, tag=京东比价
+#60s读懂世界
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js, timeout=10, enabled=false, tag=每天60s读懂世界
+#今日黄历
+cron "7 8 * * *" script-path=https://github.com/Keywos/rule/raw/main/JS/JRHL.js, timeout=300, enabled=false, tag=今日黄历
+#电信余量
+cron "6 8 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js, timeout=300, enabled=false, tag=电信余量
+
 
 [MITM]
-ca-p12 = 
+
 
 # 默认 = 启用
 hostname =
-ca-p12 = 
-ca-passphrase = 
 skip-server-cert-verify = true
 
