@@ -79,27 +79,5 @@ DOMAIN, adshows.21cn.com
 IP-CIDR, 122.229.8.47/32, no-resolve
 IP-CIDR, 122.229.29.89/32, no-resolve
 
-# > 京东
-DOMAIN-SUFFIX,jzt.jd.com
-DOMAIN-SUFFIX,img-x.jd.com
-DOMAIN-SUFFIX,du.jd.com
-DOMAIN-SUFFIX,c-nfa.jd.com
-DOMAIN-SUFFIX,cm.jd.com
-DOMAIN-SUFFIX,jddebug.com
-DOMAIN-KEYWORD,policy.jd.com
-DOMAIN-KEYWORD,kepler.jd.com
-DOMAIN-KEYWORD,bdsp.x.jd.com
-DOMAIN-KEYWORD,keplerapi.jd.com
-DOMAIN-KEYWORD,mapi.m.jd.com
-# 屏蔽DNS
-DOMAIN, dns.jd.com
-IP-CIDR, 101.124.19.122/32, no-resolve
-IP-CIDR6,2402:db40:5100:1011::5/128, no-resolve
 
-# > CSDN
-DOMAIN-SUFFIX, ad.csdn.net
-DOMAIN-SUFFIX, counter.csdn.net
-DOMAIN-SUFFIX, dc.csdn.net
-DOMAIN-SUFFIX, dc2.csdn.net
-DOMAIN-SUFFIX, medal.blog.csdn.net
 
