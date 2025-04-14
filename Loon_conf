@@ -1,6 +1,6 @@
 # Loon精简配置 @Lemonas 自用配置
 # 配置链接：https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Loon_conf
-
+# 直连配置链接：https://raw.gitcode.com/qq_59440620/LOON/raw/main/loon_conf
 
 [General]
 ipv6-vif = auto
