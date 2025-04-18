@@ -6,7 +6,7 @@
 ipv6-vif = auto
 mitm-on-wifi-access = false
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-real-ip = *.apple.com,*.icloud.com,*.ugreen.cloud,*.ugreengroup.com,
+#real-ip = *.apple.com,*.icloud.com,*.ugreen.cloud,*.ugreengroup.com,
 ip-mode = dual
 disconnect-on-policy-change = false
 dns-reject-mode = LoopbackIP
