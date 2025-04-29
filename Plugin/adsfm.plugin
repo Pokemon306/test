@@ -1,9 +1,9 @@
 #!name= 自用去广告合集
-#!desc= 去除开屏广告、内部广告等规则来自各个大佬合集，均会标识
+#!desc= 去除开屏广告、内部广告等规则来自各个大佬合集，均会标识,目前已有30款app或小程序去广告
 #!author= Lemonas[https://github.com/Lincorn]
 #!icon= https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/icon/mike.jpg
-#!loon_version = 3.2.4(787)
-#!date = 2025-4-18 16:24
+#!loon_version = 3.3.0(853)
+#!date = 2025-4-29 16:38
 
 [Rule]
 
@@ -23,6 +23,8 @@
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
 # > 云快充 微信小程序
 DOMAIN, et.ykccn.com, REJECT
+# > 怪兽充电 微信小程序
+^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
 
 
 # > 飞猪 //来自奶思大佬合集
@@ -75,13 +77,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 # > 中国广电 //来自奶思大佬合集
 ^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage reject-200
 
-# > 微信 //来自奶思大佬合集
-# 公众号文章下方广告
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
-# 微信公众号去除商品推广
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
-# > 怪兽充电 微信小程序
-^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
 
 # > 腾讯视频
 ^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
