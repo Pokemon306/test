@@ -1,5 +1,6 @@
-#!name=Github 429
-#!desc=解除 Github 429 限制
+#!name = Github 429
+#!desc = 解除 Github 429 限制
+#!icon = img-url=https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/github.png
 
 [Rewrite]
 # 解决github速率限制返回429问题
