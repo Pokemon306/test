@@ -21,6 +21,9 @@
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
 # 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
+# > 云快充 微信小程序
+DOMAIN, et.ykccn.com, REJECT
+
 
 # > 飞猪 //来自奶思大佬合集
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ reject
@@ -29,6 +32,13 @@
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome reject-200
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? reject-dict
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ reject
+
+# > 麦当劳
+^https?:\/\/api\.mcd\.cn\/bff\/portal\/home\/splash reject-200
+
+# > 必胜客
+^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member reject-200
+^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome reject
 
 # > 大麦 //来自奶思大佬合集
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome reject-200
@@ -70,6 +80,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
 # 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
+# > 怪兽充电 微信小程序
+^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
 
 # > 腾讯视频
 ^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
@@ -86,11 +98,49 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 # > 美团 & 美团外卖
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-dict
-^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
-^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
-^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
+
+# > 58
+^https?:\/\/.+?\.58cdn\.com\.cn\/brandads\/ reject-200
+^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ reject
+^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv reject-200
+^https?:\/\/app\.58\.com\/api\/log\/ reject
+
+# > 51job
+^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
+# > 前程无忧 51Job
+# 去广告 (需卸载App重装) img01.51jobcdn.com
+^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg reject
+
+
+# > 贝壳找房
+^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) reject
+
+# > 超星学习通
+^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\? reject
+
+# > 大师兄
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version reject-200
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ reject-200
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? reject-200
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) reject-200
+^https?:\/\/adservice\.sigmob\.cn\/extconfig response-body-replace-regex false true
+
+# > 飞猪 + 阿里巴巴
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/1\.0\?type=originaljson reject-img
+^https?:\/\/gw\.alicdn\.com\/mt\/ reject
+^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ reject
+
+# > 猎聘
+^https?:\/\/api-ac\.liepin\.com\/api\/com\.liepin\.cyclops\.live\.get-ad-cards reject-dict
+^https?:\/\/api-wanda\.liepin\.com\/api\/com\.liepin\.cbp\.baizhong\.op\.v2-show-4app reject-200
+
+# > U净
+^https?:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid reject
+^https?:\/\/adsoss\.zhinengxiyifang\.cn\/ads reject
+^https?:\/\/ads\.zhinengxiyifang\.cn\/api\/v1\.1\/ads\/* reject-200
+
 
 [Script]
 # > 小米商城 //来自奶思大佬合集
@@ -116,4 +166,4 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true, timeout=60, tag=大众点评
 
 [MITM]
-hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, m.360buyimg.com, api.wfdata.club, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net,  
+hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, m.360buyimg.com, api.wfdata.club, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, api.mcd.cn,  *.58cdn.com.cn, app.58.com, appapi.51job*.com, cupid.51job*.com, apps.api.ke.com,  res.pizzahut.com.cn, learn.chaoxing.com, sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn, acs.m.taobao.com, gw.alicdn.com, aag.enmonster.com, api-ac.liepin.com, api-wanda.liepin.com, img01.51jobcdn.com, api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, 
