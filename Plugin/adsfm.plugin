@@ -25,7 +25,8 @@
 DOMAIN, et.ykccn.com, REJECT
 # > 怪兽充电 微信小程序
 ^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
-
+# 移除微信公众号文章底栏都在搜  //广告必须死 wish
+^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
 
 # > 飞猪 //来自奶思大佬合集
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ reject
