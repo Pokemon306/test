@@ -50,7 +50,10 @@ disable-stun = true
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 [Host]
-
+iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
+updates.cdn-apple.com = updates.jsd.ksyunv5.com
+updates.cdn-apple.com.akadns.net = updates.jsd.ksyunv5.com
+updates.g.aaplimg.com = updates.jsd.ksyunv5.com
 
 # 订阅节点
 [Remote Proxy]
