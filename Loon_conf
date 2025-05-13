@@ -118,12 +118,11 @@ AND,((PROTOCOL,STUN)),REJECT
 [Remote Rule]
 https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list, policy=REJECT, tag=rejectAd.list, enabled=false
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/AdBlock.list, policy=REJECT, tag=AdBlock.list, enabled=true
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/hth.list, policy=DIRECT, tag=hth.list, enabled=false
 https://rule.kelee.one/Loon/Discord.list, policy=Bypass, tag=Discord.list, enabled=true
 https://rule.kelee.one/Loon/Notion.list, policy=Bypass, tag=Notion.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DouYin/DouYin.list, policy=DIRECT, tag=DouYin.list, enabled=false
-https://kelee.one/Tool/Loon/Rule/AI.list, policy=🇺🇸 US | Black Friday, tag=AI.list, enabled=true
+https://kelee.one/Tool/Loon/Rule/AI.list, policy=Bypass, tag=AI.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Threads/Threads.list, policy=Instagram, tag=Threads.list, enabled=true
 https://whatshub.top/rule/PayPal.list, policy=Bypass, tag=PayPal.list, enabled=true
 https://kelee.one/Tool/Loon/Rule/AppStore.list, policy=DIRECT, tag=AppStore.list, enabled=false
@@ -137,21 +136,19 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Instagram/Instagram.list, policy=Instagram, tag=Instagram, enabled=true
 
 # > Emby
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=🇺🇸 US | Black Friday, tag=Netflix, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Bypass, tag=Netflix, enabled=true
 
 # > YouTube
 https://rule.kelee.one/Loon/Google.list, policy=Bypass, tag=Google.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OneDrive/OneDrive.list, policy=Bypass, tag=OneDrive.list, enabled=true
 
 # > Netflix
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list, policy=DIRECT, tag=Lan.list, enabled=true
+https://kelee.one/Tool/Loon/Rule/LAN_SPLITTER, policy=DIRECT, tag=Lan.list, enabled=true
 
 # > Telegram
 
-# > Speedtest
-https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/CN_REGION, policy=DIRECT, tag=CN_REGION, enabled=true
-
 # > China
+https://kelee.one/Tool/Loon/Rule/REGION_SPLITTER, policy=DIRECT, tag=CN_REGION, enabled=true
 
 # > Proxy
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
