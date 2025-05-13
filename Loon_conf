@@ -97,7 +97,7 @@ Spotify = select,🇺🇸 US | Black Friday,自动GPT,img-url = https://raw.gith
 
 
 [Rule]
-#IP-CIDR,149.88.82.119/32,REJECT
+
 
 
 # > GeoIP China
@@ -110,11 +110,7 @@ AND,((PROTOCOL,STUN)),REJECT
 #AND,((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)),DIRECT
 #防止微信转圈圈
 #AND,((OR,((PROTOCOL,UDP), (PROTOCOL,QUIC))), (DEST-PORT,443)),REJECT-NO-DROP
-#防止TG转圈圈
-#IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
-#抖音实时消息修复
-#AND,((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.), (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, amemv.com)))))),DIRECT
-#DOMAIN,frontier-aweme.snssdk.com,DIRECT
+
 
 
 
@@ -296,11 +292,11 @@ https://raw.githubusercontent.com/mw418/Loon/main/plugin/Bing_rewards.plugin, en
 
 # 远程脚本 
 [Remote Script]
-http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=60, enabled=false, tag=京东比价
+#http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=60, enabled=false, tag=京东比价
 #60s读懂世界
-cron "5 8 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js, timeout=10, enabled=false, tag=每天60s读懂世界
+#cron "5 8 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js, timeout=10, enabled=false, tag=每天60s读懂世界
 #今日黄历
-cron "7 8 * * *" script-path=https://github.com/Keywos/rule/raw/main/JS/JRHL.js, timeout=300, enabled=false, tag=今日黄历
+#cron "7 8 * * *" script-path=https://github.com/Keywos/rule/raw/main/JS/JRHL.js, timeout=300, enabled=false, tag=今日黄历
 #电信余量
 cron "6 8 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js, timeout=300, enabled=false, tag=电信余量
 
