@@ -1,0 +1,17 @@
+#!name= 京粉去广告
+#!desc= 去除开屏广告弹窗广告，首页横幅广告
+#!author= 删除联系[https://t.me/Lemonass_bot],from广告必须死
+#!icon= https://imgs.8235467.xyz/file/1748066027958_jf.png
+#!loon_version = 3.3.0(853)
+#!date = 2025-5-23
+
+
+[Script]
+#京粉 #开屏广告弹窗广告
+^https:\/\/api\.m\.jd\.com\/api\?functionId=union_exhibition_bff reject-dict
+
+#京粉 #首页横幅广告
+http-response ^https:\/\/api\.m\.jd\.com\/\?functionId=union_exhibition_bff&client=apple&clientVer requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/js/jf.js
+
+[MITM]
+hostname = api.m.jd.com, 
