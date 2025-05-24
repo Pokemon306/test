@@ -1,0 +1,16 @@
+#!name= 转转小程序去广告
+#!desc= 去除弹窗广告、多处横幅广告悬浮广告
+#!author= 删除联系[https://t.me/Lemonass_bot],from广告必须死
+#!icon= https://imgs.8235467.xyz/file/1748066030854_zz.png
+#!loon_version = 3.3.0(853)
+#!date = 2025-5-24
+
+
+[Script]
+#转转小程序 #弹窗广告
+^https:\/\/app\.zhuanzhuan\.com\/zzopen\/zzbmlogic\/queryFrontPageWindowInfo\?cateId reject-dict
+#转转小程序 #多处横幅广告悬浮广告
+http-response ^https:\/\/app\.zhuanzhuan\.com\/zz\/(?:transfer\/getpersonalcenter\?entChanl=&uiType=1&from=1089|v2\/zzlogic\/mywxcontinenthomepage\?from=1089) script-path=https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/js/zz.js, requires-body=true
+
+[MITM]
+#hostname = 
