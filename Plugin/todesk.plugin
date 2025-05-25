@@ -1,0 +1,13 @@
+#!name= ToDesk去广告
+#!desc= 去除首页横幅广告
+#!author= 删除联系[https://t.me/Lemonass_bot],from广告必须死
+#!icon= https://imgs.8235467.xyz/file/1748150957429_todesk.png
+#!loon_version = 3.3.0(853)
+#!date = 2025-5-25
+
+
+[Script]
+http-response https:\/\/st\.todesk\.com\/config-center\/sync-config\?fullUpdate=false script-path=https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/js/todesk.js, requires-body=true
+
+[MITM]
+hostname = st.todesk.com, 
