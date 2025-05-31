@@ -1,6 +1,6 @@
 #!name = 云闪付去广告
 #!desc = 过滤银联云闪付广告，需要IPA签名注入方可使用，仅支持云闪付10.1.2版。App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。
-#!openUrl = 主页：https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/34bf3aad-7872-497d-b239-198e27e8c84c
+#!homepage = 主页：https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/34bf3aad-7872-497d-b239-198e27e8c84c
 #!author = RuCu6[https://github.com/RuCu6]
 #!tag = 去广告
 #!system = 
