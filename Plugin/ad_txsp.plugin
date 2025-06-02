@@ -1,0 +1,12 @@
+#!name=腾讯视频去广告
+#!desc=腾讯视频去广告
+#!icon=https://imgs.8235467.xyz/file/1748492258414_txsp.png
+#!tag=去广告
+
+[Rule]
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
+OR,((DOMAIN,pgdt.gtimg.cn),AND,((USER-AGENT,"live4iphoneRel*"),(IP-CIDR,0.0.0.0/0,no-resolve))),REJECT-DROP
+URL-REGEX,"^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user",REJECT
+
+[MITM]
+hostname = ossgw.alicdn.com
