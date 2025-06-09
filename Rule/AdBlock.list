@@ -27,25 +27,25 @@ DOMAIN, apis.alenable.com
 DOMAIN, ads-shopping.shouqianba.com
 
 # > 腾讯视频
-DOMAIN, adsmind.gdtimg.com
-DOMAIN, btrace.qq.com
-DOMAIN, btrace.video.qq.com
-DOMAIN, info4.video.qq.com
-DOMAIN, info6.video.qq.com
-DOMAIN, ios.video.mpush.qq.com
-DOMAIN, mtrace.qq.com
-DOMAIN, p.l.qq.com
-DOMAIN, pgdt.gtimg.cn
-DOMAIN, rpt.gdt.qq.com
-DOMAIN-SUFFIX,trace.qq.com
-DOMAIN-SUFFIX,tetrack.qq.com
-DOMAIN-SUFFIX,tpns.tencent.com
-DOMAIN-SUFFIX,api.poll.video.qq.com
-DOMAIN-SUFFIX,static-res.qq.com
-DOMAIN-SUFFIX,stat.tpns.tencent.com
-DOMAIN, h.trace.qq.com
-DOMAIN-KEYWORD,omgmta.qq.com
-DOMAIN-KEYWORD,omgmta1.qq.com
+#DOMAIN, adsmind.gdtimg.com
+#DOMAIN, btrace.qq.com
+#DOMAIN, btrace.video.qq.com
+#DOMAIN, info4.video.qq.com
+#DOMAIN, info6.video.qq.com
+#DOMAIN, ios.video.mpush.qq.com
+#DOMAIN, mtrace.qq.com
+#DOMAIN, p.l.qq.com
+#DOMAIN, pgdt.gtimg.cn
+#DOMAIN, rpt.gdt.qq.com
+#DOMAIN-SUFFIX,trace.qq.com
+#DOMAIN-SUFFIX,tetrack.qq.com
+#DOMAIN-SUFFIX,tpns.tencent.com
+#DOMAIN-SUFFIX,api.poll.video.qq.com
+#DOMAIN-SUFFIX,static-res.qq.com
+#DOMAIN-SUFFIX,stat.tpns.tencent.com
+#DOMAIN, h.trace.qq.com
+#DOMAIN-KEYWORD,omgmta.qq.com
+#DOMAIN-KEYWORD,omgmta1.qq.com
 
 # > 万能钥匙专业版
 # 感谢#All in 梭哈分享
