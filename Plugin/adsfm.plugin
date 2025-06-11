@@ -80,10 +80,10 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 
 
 # > 腾讯视频
-#^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
-#^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
-#^https?:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
-#^https?:\/\/vv\.video\.qq\.com\/getvinfo response-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
+^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
+^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+^https?:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+^https?:\/\/vv\.video\.qq\.com\/getvinfo response-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
 
 # > 京东去广告补充
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
