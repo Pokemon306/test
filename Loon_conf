@@ -77,17 +77,17 @@ updates.g.aaplimg.com = updates.jsd.ksyunv5.com
 
 # 策略组
 [Proxy Group]
-Bypass = select,落地HK,🇭🇰HK-hy2,🇺🇸 US | Black Friday,香港延迟优选,新加坡延迟优选,日本延迟优选,🇯🇵 𝙅𝙖𝙥𝙖𝙣 | 𝘽𝙂𝙋,🇭🇰 HK-BGP,🇭🇰𝙃𝙆 | 𝘽𝙂𝙋ˣ³,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/lightning.png
+Bypass = select,香港延迟优选,新加坡延迟优选,日本延迟优选,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/lightning.png
 香港延迟优选 = url-test,香港节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong.png
 日本延迟优选 = url-test,日本节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/zl-icon-jp-flag.png
 台湾延迟优选 = url-test,台湾节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan(3).png
 韩国延迟优选 = url-test,韩国节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Korea.png
 新加坡延迟优选 = url-test,新加坡节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore(1).png
-自动GPT = url-test,美国节点,🇺🇸 US | Black Friday,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png
-Telegram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,🇺🇸 US | Black Friday,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(1).png
+自动GPT = url-test,美国节点,interval = 600,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png
+Telegram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(1).png
 Instagram = select,香港延迟优选,新加坡延迟优选,日本延迟优选,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
-TikTok = select,日本延迟优选,香港延迟优选,新加坡延迟优选,自动GPT,🇺🇸 US | Black Friday,🇭🇰HK-hy2,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok((2).png
-Spotify = select,🇺🇸 US | Black Friday,自动GPT,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
+TikTok = select,日本延迟优选,香港延迟优选,新加坡延迟优选,自动GPT,url = http://cp.cloudflare.com,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok((2).png
+Spotify = select,自动GPT,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
 
 
 
@@ -118,17 +118,17 @@ AND,((PROTOCOL,STUN)),REJECT
 [Remote Rule]
 https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list, policy=REJECT, tag=rejectAd.list, enabled=false
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Rule/AdBlock.list, policy=REJECT, tag=AdBlock.list, enabled=true
-https://rule.kelee.one/Loon/Discord.list, policy=Bypass, tag=Discord.list, enabled=true
-https://rule.kelee.one/Loon/Notion.list, policy=Bypass, tag=Notion.list, enabled=true
+https://rule.kelee.one/Loon/Discord.lsr, policy=Bypass, tag=Discord.list, enabled=true
+https://rule.kelee.one/Loon/Notion.lsr, policy=Bypass, tag=Notion.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DouYin/DouYin.list, policy=DIRECT, tag=DouYin.list, enabled=false
-https://kelee.one/Tool/Loon/Rule/AI.list, policy=Bypass, tag=AI.list, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=Bypass, tag=AI.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Threads/Threads.list, policy=Instagram, tag=Threads.list, enabled=true
 https://whatshub.top/rule/PayPal.list, policy=Bypass, tag=PayPal.list, enabled=true
-https://kelee.one/Tool/Loon/Rule/AppStore.list, policy=DIRECT, tag=AppStore.list, enabled=false
+https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=DIRECT, tag=AppStore.list, enabled=false
 https://whatshub.top/rule/Apple.list, policy=DIRECT, tag=Apple.list, enabled=false
-https://kelee.one/Tool/Loon/Rule/AppleID.list, policy=DIRECT, tag=Apple ID, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AppleAccount.lsr, policy=DIRECT, tag=Apple ID, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=Bypass, tag=GitHub.list, enabled=true
-https://rule.kelee.one/Loon/YouTube.list, policy=Bypass, tag=YouTube.list, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=Bypass, tag=YouTube.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy=Bypass, tag=Twitter.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Facebook/Facebook.list, policy=Instagram, tag=Facebook.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=Spotify, tag=Spotify.list, enabled=true
@@ -138,15 +138,15 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Bypass, tag=Netflix, enabled=true
 
 # > YouTube
-https://rule.kelee.one/Loon/Google.list, policy=Bypass, tag=Google.list, enabled=true
+https://rule.kelee.one/Loon/Google.lsr, policy=Bypass, tag=Google.list, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OneDrive/OneDrive.list, policy=Bypass, tag=OneDrive.list, enabled=true
 
 # > Telegram
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 
 # > China
-https://kelee.one/Tool/Loon/Rule/REGION_SPLITTER, policy=DIRECT, tag=CN_REGION, enabled=true
-https://kelee.one/Tool/Loon/Rule/LAN_SPLITTER, policy=DIRECT, tag=Lan.list, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER, policy=DIRECT, tag=CN_REGION, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER, policy=DIRECT, tag=Lan.list, enabled=true
 
 # > Proxy
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
@@ -163,10 +163,10 @@ https://kelee.one/Tool/Loon/Rule/LAN_SPLITTER, policy=DIRECT, tag=Lan.list, enab
 # 插件
 [Plugin]
 # > 开屏广告
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=Bypass, tag=插件仓库, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, tag=拦截HTTPDNS, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/HTTPDNS.png, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, tag=广告平台拦截器, enabled=true
-#https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, tag=可莉广告过滤器, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=Bypass, tag=插件仓库, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, tag=拦截HTTPDNS, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/HTTPDNS.png, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, tag=广告平台拦截器, enabled=true
+#https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, tag=可莉广告过滤器, enabled=true
 https://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/AD_Web.plugin, policy=REJECT-DROP, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/adsfm.plugin, tag=自用去广告合集, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Fries%20General%20Enhanced, enabled=true
@@ -174,30 +174,30 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-pr
 https://github.com/VirgilClyne/GetSomeFries/raw/main/plugin/DNS.plugin, enabled=true
 https://raw.githubusercontent.com/tearpeng/ios/refs/heads/main/dns%E6%98%A0%E5%B0%84, enabled=true
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=🇺🇸 US | Black Friday, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin, tag=腾讯视频去广告, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Tencent_Video_remove_ads.lpx, tag=腾讯视频去广告, enabled=false
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/KuaiShou_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/HKDouYin_remove_ads.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/ZhiLianZhaoPin_remove_ads.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/KebidaDushu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/KOOK_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuaiShou_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/HKDouYin_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/iQiYi_Video_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/ZhiLianZhaoPin_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/KebidaDushu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KOOK_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Reddit_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/CiSC.plugin, tag=签到脚本合集, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/Jingdong.plugin, enabled=true
 http://raw.githubusercontent.com/LD2J0618/loon/refs/heads/plugin%26rule/WeChat.plugin, policy=DIRECT, enabled=false
 https://raw.githubusercontent.com/Mai486/Loon/main/plugin/Tg_url_turrit.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/WPS_checkin.plugin, enabled=false
+https://kelee.one/Tool/Loon/Lpx/WPS_checkin.lpx, enabled=false
 https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin, enabled=false
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/JD_Price.plugin, enabled=false
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, tag=快捷搜索, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, tag=快捷搜索, enabled=true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=Bypass, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=Bypass, tag=BoxJs, enabled=true
-https://kelee.one/Tool/Loon/Plugin/TestFlightRegionUnlock.plugin, policy=DIRECT, tag=TestFlight地区解锁, enabled=false
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=Bypass, tag=BoxJs, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=DIRECT, tag=TestFlight地区解锁, enabled=false
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduWenku_crack.plugin, enabled=true
 https://raw.githubusercontent.com/deezertidal/private/master/plugallery/bili.plugin, tag=Bilibili 解锁1080P, enabled=true
 https://raw.8235467.xyz/Plugin/xmlyjisu.plugin?token=l123123, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Himalaya.png, enabled=true
@@ -205,8 +205,8 @@ https://raw.8235467.xyz/Plugin/keep.plugin?token=l123123, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js/_end_/panda.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=百度网盘会员, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/BaiduNetDisk.png, enabled=false
 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin, enabled=false
 http://script.hub/file/_start_/https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy-surge.sgmodule/_end_/wyy-surge.plugin?type=qx-rewrite&target=loon-plugin&del=true, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/wyy(1).png, enabled=false
-https://kelee.one/Tool/Loon/Plugin/QQ_Redirect.plugin, tag=QQ链接解锁, enabled=true
-https://kelee.one/Tool/Loon/Plugin/VVebo_repair.plugin, tag=VVebo时间线修复, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, tag=QQ链接解锁, enabled=true
+https://kelee.one/Tool/Loon/Lpx/VVebo_repair.lpx, tag=VVebo时间线修复, enabled=true
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/ColorfulClouds_shared_membership.plugin, enabled=true
 https://whatshub.top/plugin/wxds.plugin, tag=微信读书会员, enabled=true
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_shared_membership.plugin, enabled=false
@@ -214,67 +214,67 @@ https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Bilibili_cookie_extracti
 https://raw.githubusercontent.com/deezertidal/private/master/plugallery/ydcd.plugin, tag=有道词典会员, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/elema.plugin, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/meituan.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/LuckinCoffee_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QtingFM_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Douyu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/XiaChuFang_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/MeiShiJie_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/MojiWeather_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BitqiuPan_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/EtouchEcalendar_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, tag=哔哩哔哩去广告, enabled=false
-https://kelee.one/Tool/Loon/Plugin/SodaMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/KuaiDuiZuoYe_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduPhoto_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/OraySunlogin_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/MaFengWo_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/51Job_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Yueyou_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, tag=网易云音乐去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/MailMaster_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LuckinCoffee_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QtingFM_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Douyu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/XiaChuFang_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeiShiJie_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MojiWeather_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BitqiuPan_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/EtouchEcalendar_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, tag=哔哩哔哩去广告, enabled=false
+https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuaiDuiZuoYe_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduPhoto_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/OraySunlogin_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MaFengWo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/51Job_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Yueyou_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx, tag=网易云音乐去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MailMaster_remove_ads.lpx, enabled=true
 https://raw.githubusercontent.com/Lincorn/test/refs/heads/main/Plugin/12306_remove_ads.plugin, tag=12306去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/12306_remove_ads.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, tag=QQ音乐去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, tag=微博去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/ZhuanZhuan_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, tag=知乎去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, tag=小红书去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=YouTube去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, tag=高德地图去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin, tag=闲鱼去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, tag=QQ音乐去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, tag=微博去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/ZhuanZhuan_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, tag=知乎去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, tag=小红书去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, tag=YouTube去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, tag=高德地图去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, tag=闲鱼去广告, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetDisk.plugin, tag=百度网盘去广告, enabled=false
-https://kelee.one/Tool/Loon/Plugin/KuGou_remove_ads.plugin, tag=酷狗音乐去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, tag=百度网页去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/KuaiDi100_remove_ads.plugin, tag=快递100去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/FC_Box_remove_ads.plugin, tag=丰巢去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/PuPuMall_remove_ads.plugin, tag=朴朴超市去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin, tag=Soul去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/NetEaseGodlike_remove_ads.plugin, tag=网易大神去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/SF-Express_remove_ads.plugin, tag=顺丰速运去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/555DY_remove_ads.plugin, tag=555电影去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuGou_remove_ads.lpx, tag=酷狗音乐去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, tag=百度网页去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/KuaiDi100_remove_ads.lpx, tag=快递100去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FC_Box_remove_ads.lpx, tag=丰巢去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PuPuMall_remove_ads.lpx, tag=朴朴超市去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx, tag=Soul去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/NetEaseGodlike_remove_ads.lpx, tag=网易大神去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/SF-Express_remove_ads.lpx, tag=顺丰速运去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/555DY_remove_ads.lpx, tag=555电影去广告, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Spotify.png, enabled=false
-https://kelee.one/Tool/Loon/Plugin/Spotify_lyrics_translation.plugin, tag=Spotify歌词增强, enabled=false
-https://kelee.one/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin, tag=123云盘去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Keep_remove_ads.plugin, tag=Keep去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/UnionPay_remove_ads_with_ssl_unpinning.plugin, tag=云闪付去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QiDian_remove_ads.plugin, tag=起点读书去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduMap_remove_ads.plugin, tag=百度地图去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, tag=全民K歌去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuarkBrowser_remove_ads.plugin, tag=夸克去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, tag=微信公众号去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin, tag=彩云天气去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, tag=Spotify去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/YoudaoDict_remove_ads.plugin, tag=网易有道词典去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, tag=番茄小说去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, tag=滴滴出行去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, tag=菜鸟去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin, tag=拼多多去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, tag=微信小程序去广告, enabled=false
-https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, tag=酷安去广告, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, tag=淘宝去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx, tag=Spotify歌词增强, enabled=false
+https://kelee.one/Tool/Loon/Lpx/123NetWorkDisk_remove_ads.lpx, tag=123云盘去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Keep_remove_ads.lpx, tag=Keep去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/UnionPay_remove_ads_with_ssl_unpinning.lpx, tag=云闪付去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx, tag=起点读书去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduMap_remove_ads.lpx, tag=百度地图去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQKSong_remove_ads.lpx, tag=全民K歌去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuarkBrowser_remove_ads.lpx, tag=夸克去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, tag=微信公众号去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx, tag=彩云天气去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx, tag=Spotify去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YoudaoDict_remove_ads.lpx, tag=网易有道词典去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/DragonRead_remove_ads.lpx, tag=番茄小说去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, tag=滴滴出行去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, tag=菜鸟去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, tag=拼多多去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, tag=微信小程序去广告, enabled=false
+https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, tag=酷安去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, tag=淘宝去广告, enabled=true
 https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduNetDisk_crack.plugin, enabled=true
 https://raw.githubusercontent.com/mw418/Loon/main/plugin/Bing_rewards.plugin, enabled=false
 
@@ -302,4 +302,3 @@ cron "6 8 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaTelec
 # 默认 = 启用
 hostname =
 skip-server-cert-verify = true
-
