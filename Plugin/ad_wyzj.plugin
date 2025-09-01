@@ -1,0 +1,36 @@
+#!name = 窝友自驾去广告
+#!desc = 精简去广告，解锁窝窝地址导航
+#!openUrl = https://apps.apple.com/app/id1358590450
+#!icon = https://raw.githubusercontent.com/fishdown/Icon/master/app/wyzj.png
+#!tag = 去广告
+#!author= fishdown
+#!date = 2025-08-25
+
+[MITM]
+hostname = *.woyouzhijia.cn
+
+[Rewrite]
+# 寻找窝窝，解锁地址导航
+^https:\/\/app\.woyouzhijia\.cn\/app\/advertisement\/getAppFunctionKg response-body-json-jq '.data.vipTime = "2099-01-01 00:00:00"'
+^https:\/\/app\.woyouzhijia\.cn\/app\/shop\/virtual\/goods\/findGood response-body-json-jq '.data.vipTime = "2099-01-01 00:00:00"'
+# 创建私人窝窝
+^https:\/\/app\.woyouzhijia\.cn\/app\/userInfo\/getByUserId response-body-json-jq '.data.vip = 1 | .data.vipTime = "2099-01-01 00:00:00"'
+# 屏蔽商城页面
+^https:\/\/web\.woyouzhijia\.cn\/web\/goodsList\.html reject-200
+# 清空首页，只留快捷方式
+^https:\/\/app\.woyouzhijia\.cn\/app\/advertisement\/indexAd response-body-json-jq 'del(.data.middleNarrowList,.data.imageList,.data.customList)'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
