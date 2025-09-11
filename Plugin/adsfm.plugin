@@ -9,8 +9,21 @@
 # > 农行防代理检测
 DOMAIN,msmp.abchina.com.cn,REJECT
 
+# > 中国联通去广告
+# 移除开屏广告
+DOMAIN,m1.ad.10010.com,REJECT
+
 
 [Rewrite]
+# > 中国联通去广告 
+# 移除主页几个小按钮
+^https:\/\/m\.client\.10010\.com\/clientIndex\/v1\/api\/navHome response-body-json-jq '.datas.homeTopMenuItems |= map(select(.menuName != "通通" and .menuName != "签到"))'
+# 移除主页浮窗和底部推广
+^https:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter response-body-json-jq 'del(.["HomeFusion.fuchuangAdv_A8"], .["HomeFusion.bottomLabel"])'
+# 移除搜索框推广
+^https:\/\/m\.client\.10010\.com\/search_service\/tyfbSearch\/searchDiscoverListExpress response-body-json-jq '.data = []'
+^https:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord response-body-json-jq '.["113000004"] = []'
+
 # > 识货 //来自奶思大佬合集
 # 开屏广告
 ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) reject
@@ -63,14 +76,6 @@ DOMAIN, et.ykccn.com, REJECT
 ^https?:\/\/gx\.10086\.cn\/zt-portal\/gxhzg\/portal\/app\/api\/v reject
 # > 中国移动 山东 
 https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-dict
-
-# > 中国联通 //来自奶思大佬合集
-^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
-^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
-^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
-^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
-^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
 
 # > 中国电信 //来自奶思大佬合集
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
@@ -163,4 +168,4 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true, timeout=60, tag=大众点评
 
 [MITM]
-hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m1.ad.10010.com, res.mall.10010.cn,cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, m.360buyimg.com, api.wfdata.club, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, api.mcd.cn,  *.58cdn.com.cn, app.58.com, appapi.51job*.com, cupid.51job*.com, apps.api.ke.com,  res.pizzahut.com.cn, learn.chaoxing.com, sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn, acs.m.taobao.com, gw.alicdn.com, aag.enmonster.com, api-ac.liepin.com, api-wanda.liepin.com, img01.51jobcdn.com, api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, 
+hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn, res.kfc.com.cn, amdc.m.taobao.com, h.client.app.coc.10086.cn, app.10086.cn, wap.js.10086.cn, gd.10086.cn, gx.10086.cn, m.sd.10086.cn, m.client.10010.com, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, mp.weixin.qq.com,  open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, m.360buyimg.com, api.wfdata.club, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, api.mcd.cn,  *.58cdn.com.cn, app.58.com, appapi.51job*.com, cupid.51job*.com, apps.api.ke.com,  res.pizzahut.com.cn, learn.chaoxing.com, sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn, acs.m.taobao.com, gw.alicdn.com, aag.enmonster.com, api-ac.liepin.com, api-wanda.liepin.com, img01.51jobcdn.com, api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, 
