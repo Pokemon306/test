@@ -164,8 +164,8 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 cron {arg61} script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, timeout=300, enable={arg62}, tag=胖乖生活
 http-request ^https:\/\/userapi\.qiekj\.com\/wechat\/unionId\/login script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, requires-body=true, timeout=60, enable = {arg63}, tag=胖乖生活cookie获取
 
-cron {arg64} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js, timeout=300, enable={arg65},tag = 途虎养车
-http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo tag=途虎养车获取cookie, script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js,enable={arg66},requires-body=0
+cron {arg64} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/refs/heads/master/Script/tuhu.js, timeout=300, enable={arg65},tag = 途虎养车
+http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo tag=途虎养车获取cookie, script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/refs/heads/master/Script/tuhu.js,enable={arg66},requires-body=0
 
 cron {arg67} script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=300, enable={arg68},tag = 奈雪点单
 http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60,  enable={arg69},tag=奈雪点单获取token
